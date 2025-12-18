@@ -35,12 +35,12 @@ export default function Navbar() {
   ]
 
   return (
-    <nav className="fixed top-6 left-0 right-0 z-50 px-4 md:px-8">
-      <div className={`max-w-6xl mx-auto rounded-[2rem] transition-all duration-500 glass ${
-        isScrolled ? 'py-3' : 'py-5'
+    <nav className="fixed top-4 md:top-6 left-0 right-0 z-[100] px-4 md:px-8">
+      <div className={`max-w-6xl mx-auto rounded-[1.5rem] md:rounded-[2rem] transition-all duration-500 glass ${
+        isScrolled ? 'py-2 md:py-3' : 'py-4 md:py-5'
       }`}>
-        <div className="px-8 flex items-center justify-between">
-          <Link href="/" className="text-xl font-bold tracking-tight text-[#1D1D1F] dark:text-[#F5F5F7]">
+        <div className="px-4 md:px-8 flex items-center justify-between">
+          <Link href="/" className="text-lg md:text-xl font-bold tracking-tight text-[#1D1D1F] dark:text-[#F5F5F7] whitespace-nowrap">
             KONAHA <span className="text-[#007AFF]">Studio</span>
           </Link>
           
@@ -95,29 +95,41 @@ export default function Navbar() {
             </div>
           </div>
 
-          <button className="md:hidden text-[#1D1D1F] dark:text-[#F5F5F7]" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          {/* Mobile Right Side */}
+          <div className="flex items-center space-x-2 md:hidden">
+            <button 
+              onClick={toggleTheme}
+              className="p-2 text-[#1D1D1F] dark:text-[#F5F5F7] hover:bg-slate-100 dark:hover:bg-white/10 rounded-full transition-all"
+            >
+              {theme === 'light' ? <Moon size={18} /> : <Sun size={18} />}
+            </button>
+            <button className="p-2 text-[#1D1D1F] dark:text-[#F5F5F7]" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
       </div>
 
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div 
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.95 }}
-            className="md:hidden mt-4 mx-auto max-w-sm glass rounded-3xl overflow-hidden shadow-2xl"
+            initial={{ opacity: 0, y: -20, scale: 0.95 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: -20, scale: 0.95 }}
+            className="md:hidden mt-2 glass rounded-3xl overflow-hidden shadow-2xl border border-slate-200/50 dark:border-white/10"
           >
             <div className="p-6 space-y-4">
-              <Link href="/" onClick={() => setIsMenuOpen(false)} className="block text-lg font-medium text-[#1D1D1F] dark:text-[#F5F5F7]">Home</Link>
-              <Link href="/about" onClick={() => setIsMenuOpen(false)} className="block text-lg font-medium text-[#1D1D1F]/60 dark:text-slate-400">About</Link>
-              <div className="pt-2 pb-2 border-y border-slate-100 dark:border-slate-800 space-y-2">
+              <Link href="/" onClick={() => setIsMenuOpen(false)} className="block text-lg font-bold text-[#1D1D1F] dark:text-[#F5F5F7]">Home</Link>
+              <Link href="/about" onClick={() => setIsMenuOpen(false)} className="block text-lg font-bold text-[#1D1D1F]/60 dark:text-slate-400">About</Link>
+              <div className="pt-4 pb-2 border-t border-slate-100 dark:border-white/5 space-y-3">
+                <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#1D1D1F]/30 dark:text-slate-500 ml-1">Our Services</p>
                 {serviceItems.map(item => (
-                  <Link key={item.id} href={`/services/${item.id}`} onClick={() => setIsMenuOpen(false)} className="block text-[#007AFF] font-medium ml-4">{item.name}</Link>
+                  <Link key={item.id} href={`/services/${item.id}`} onClick={() => setIsMenuOpen(false)} className="block text-[#007AFF] font-bold text-lg">{item.name}</Link>
                 ))}
               </div>
-              <button className="w-full py-3 bg-[#007AFF] text-white rounded-2xl font-bold">Contact Us</button>
+              <button className="w-full py-4 bg-[#007AFF] text-white rounded-[1.25rem] font-black text-lg shadow-lg shadow-blue-500/20 active:scale-95 transition-all">
+                Contact Us
+              </button>
             </div>
           </motion.div>
         )}

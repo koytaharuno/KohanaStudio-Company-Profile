@@ -25,7 +25,7 @@ export default function Pricing() {
   ]
 
   return (
-    <section id="pricing" className="py-24 bg-white dark:bg-[#1C1C1E] border-b border-slate-200 dark:border-white/5 transition-colors duration-500">
+    <section id="pricing" className="py-24 bg-white dark:bg-[#1C1C1E] transition-colors duration-500">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="text-center mb-20">
           <h2 className="text-3xl md:text-4xl font-bold text-[#1D1D1F] dark:text-[#F5F5F7] mb-4">Investment Plans</h2>

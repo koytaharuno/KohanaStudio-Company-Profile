@@ -44,16 +44,17 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-6">
           
           {/* Hero Section */}
-          <div className="mb-40">
+          <div className="mb-40 text-center lg:text-left">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+              className="flex flex-col items-center lg:items-start"
             >
               <h1 className="text-6xl md:text-[7rem] font-bold text-[#1D1D1F] dark:text-[#F5F5F7] tracking-tighter leading-[0.95] mb-12">
                 Behind the <br /> <span className="text-[#007AFF]">Konaha Legacy.</span>
               </h1>
-              <p className="text-2xl md:text-3xl text-[#1D1D1F]/50 dark:text-slate-400 max-w-3xl font-medium leading-relaxed">
+              <p className="text-2xl md:text-3xl text-[#1D1D1F]/50 dark:text-slate-400 max-w-3xl font-medium leading-relaxed mx-auto lg:mx-0">
                 We don't just build models. We weave digital souls that connect creators with their communities across the virtual world.
               </p>
             </motion.div>

@@ -29,12 +29,12 @@ export default function Services() {
   ]
 
   return (
-    <section id="services" className="py-32 bg-white dark:bg-[#1C1C1E] border-b border-slate-200 dark:border-white/5 transition-colors duration-500">
+    <section id="services" className="py-32 bg-white dark:bg-[#1C1C1E] transition-colors duration-500">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-24 gap-8">
+        <div className="flex flex-col md:flex-row justify-between items-center md:items-end mb-24 gap-8 text-center md:text-left">
           <div className="max-w-2xl">
             <h2 className="text-4xl md:text-6xl font-bold text-[#1D1D1F] dark:text-[#F5F5F7] mb-6 tracking-tight">Expertise.</h2>
-            <p className="text-xl text-[#1D1D1F]/50 dark:text-slate-400 font-medium leading-relaxed">
+            <p className="text-xl text-[#1D1D1F]/50 dark:text-slate-400 font-medium leading-relaxed mx-auto md:mx-0">
               We specialize in the intersection of art and technology, creating virtual identities that resonate with global audiences.
             </p>
           </div>

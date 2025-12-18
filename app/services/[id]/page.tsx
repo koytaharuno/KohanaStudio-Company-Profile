@@ -69,12 +69,13 @@ export default function ServiceDetail() {
             <span>Back to Home</span>
           </Link>
 
-          <div className="grid lg:grid-cols-2 gap-16 xl:gap-24 items-center">
+          <div className="grid lg:grid-cols-2 gap-16 xl:gap-24 items-center text-center lg:text-left">
             {/* Left Content */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
+              className="flex flex-col items-center lg:items-start"
             >
               <div className={`w-16 h-16 rounded-2xl ${service.color} flex items-center justify-center mb-8 shadow-lg shadow-blue-500/20`}>
                 <service.icon className="text-white" size={32} />
@@ -82,12 +83,12 @@ export default function ServiceDetail() {
               <h1 className="text-5xl md:text-6xl font-bold text-[#1D1D1F] dark:text-[#F5F5F7] mb-8 tracking-tight">
                 {service.title}
               </h1>
-              <p className="text-xl text-[#1D1D1F]/60 dark:text-slate-400 leading-relaxed mb-12 font-medium">
+              <p className="text-xl text-[#1D1D1F]/60 dark:text-slate-400 leading-relaxed mb-12 font-medium mx-auto lg:mx-0">
                 {service.description}
               </p>
 
-              <div className="space-y-4 mb-12">
-                <h3 className="text-2xl font-bold text-[#1D1D1F] dark:text-[#F5F5F7] mb-6">What you'll get:</h3>
+              <div className="space-y-4 mb-12 w-full max-w-lg lg:max-w-none text-left">
+                <h3 className="text-2xl font-bold text-[#1D1D1F] dark:text-[#F5F5F7] mb-6 text-center lg:text-left">What you'll get:</h3>
                 {service.features.map((feature, i) => (
                   <div key={i} className="flex items-center space-x-3 text-[#1D1D1F]/70 dark:text-slate-300 font-medium">
                     <div className="w-6 h-6 rounded-full bg-[#007AFF] flex items-center justify-center flex-shrink-0">

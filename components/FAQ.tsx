@@ -43,7 +43,7 @@ export default function FAQ() {
   const categories = Object.keys(faqData)
 
   return (
-    <section id="faq" className="py-24 bg-white dark:bg-[#1C1C1E] border-b border-slate-200 dark:border-white/5 transition-colors duration-500">
+    <section id="faq" className="py-24 bg-white dark:bg-[#1C1C1E] transition-colors duration-500">
       <div className="max-w-4xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-[#1D1D1F] dark:text-[#F5F5F7] mb-6 tracking-tight">Support & FAQ</h2>

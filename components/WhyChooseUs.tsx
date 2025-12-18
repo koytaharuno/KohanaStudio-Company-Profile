@@ -27,17 +27,17 @@ export default function WhyChooseUs() {
   ]
 
   return (
-    <section className="py-32 bg-white dark:bg-[#1C1C1E] border-b border-slate-200 dark:border-white/5 transition-colors duration-500">
+    <section className="py-32 bg-white dark:bg-[#1C1C1E] transition-colors duration-500">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <div className="grid lg:grid-cols-2 gap-24 items-center">
-          <div>
+        <div className="grid lg:grid-cols-2 gap-24 items-center text-center lg:text-left">
+          <div className="flex flex-col items-center lg:items-start">
             <h2 className="text-4xl md:text-6xl font-bold text-[#1D1D1F] dark:text-[#F5F5F7] mb-8 tracking-tight leading-tight">
               Why <span className="text-[#007AFF]">Konaha</span> <br /> is the right choice.
             </h2>
-            <p className="text-xl text-[#1D1D1F]/60 dark:text-slate-400 font-medium leading-relaxed mb-12">
+            <p className="text-xl text-[#1D1D1F]/60 dark:text-slate-400 font-medium leading-relaxed mb-12 mx-auto lg:mx-0">
               We combine artistic mastery with technical excellence to deliver virtual identities that don't just look good—they feel alive.
             </p>
-            <div className="flex gap-4">
+            <div className="flex gap-4 justify-center lg:justify-start">
               <div className="px-6 py-3 rounded-full bg-[#007AFF]/5 text-[#007AFF] text-sm font-bold uppercase tracking-widest">Innovation</div>
               <div className="px-6 py-3 rounded-full bg-[#007AFF]/5 text-[#007AFF] text-sm font-bold uppercase tracking-widest">Quality</div>
             </div>
@@ -51,6 +51,7 @@ export default function WhyChooseUs() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: i * 0.1 }}
+                className="flex flex-col items-center lg:items-start"
               >
                 <div className="w-12 h-12 rounded-2xl bg-[#007AFF] flex items-center justify-center mb-6 shadow-lg shadow-blue-500/20">
                   <item.icon className="text-white" size={24} strokeWidth={2} />
