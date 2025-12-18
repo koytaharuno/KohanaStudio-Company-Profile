@@ -11,7 +11,7 @@ const serviceData = {
     title: 'Live2D Model',
     icon: Sparkles,
     color: 'bg-[#007AFF]',
-    image: '/images/showcase.jpg', 
+    image: '/images/showcase.jpg',
     description: 'Professional Live2D model creation from illustration to ready-to-use rigging. We focus on natural expressions and smooth movements for the best streaming experience.',
     features: [
       'High-Res Character Illustration (PSD Layered)',
@@ -25,7 +25,7 @@ const serviceData = {
     title: 'Stream Overlay',
     icon: Monitor,
     color: 'bg-[#5856D6]',
-    image: '/images/showcase.jpg', 
+    image: '/images/stream.jpeg',
     description: 'Exclusive stream layouts reflecting your VTuber persona. Our overlays are designed to increase viewer interaction and professional presence.',
     features: [
       'Game & Just Chatting Layouts',
@@ -39,7 +39,7 @@ const serviceData = {
     title: 'Visual Identity',
     icon: Palette,
     color: 'bg-[#32ADE6]',
-    image: '/images/showcase.jpg', 
+    image: '/images/showcase.jpg',
     description: 'Building a strong brand for your virtual career. We help create consistent visual elements across all platforms.',
     features: [
       'Custom Logo Design (Type & Icon)',
@@ -61,7 +61,7 @@ export default function ServiceDetail() {
   return (
     <div className="min-h-screen bg-[#F5F5F7] dark:bg-black transition-colors duration-500">
       <Navbar />
-      
+
       <main className="pt-40 pb-20 px-4 md:px-8">
         <div className="max-w-6xl mx-auto">
           <Link href="/" className="inline-flex items-center space-x-2 text-[#007AFF] mb-12 font-bold group">
@@ -111,15 +111,15 @@ export default function ServiceDetail() {
               className="relative"
             >
               <div className="aspect-[4/5]  border border-slate-200 dark:border-white/10 overflow-hidden group relative">
-                <img 
-                  src={service.image} 
-                  alt={service.title} 
+                <img
+                  src={service.image}
+                  alt={service.title}
                   className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
                 />
-               
-             </div>
-             
-             
+
+              </div>
+
+
             </motion.div>
           </div>
         </div>
