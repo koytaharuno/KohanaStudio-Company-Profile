@@ -11,7 +11,7 @@ const serviceData = {
     title: 'Live2D Model',
     icon: Sparkles,
     color: 'bg-[#007AFF]',
-    image: '/images/showcase.jpg',
+    image: '/images/live2d.jpeg',
     description: 'Professional Live2D model creation from illustration to ready-to-use rigging. We focus on natural expressions and smooth movements for the best streaming experience.',
     features: [
       'High-Res Character Illustration (PSD Layered)',
@@ -39,7 +39,7 @@ const serviceData = {
     title: 'Visual Identity',
     icon: Palette,
     color: 'bg-[#32ADE6]',
-    image: '/images/showcase.jpg',
+    image: '/images/visuality.jpeg',
     description: 'Building a strong brand for your virtual career. We help create consistent visual elements across all platforms.',
     features: [
       'Custom Logo Design (Type & Icon)',
@@ -112,9 +112,9 @@ export default function ServiceDetail() {
               className="relative flex items-center justify-center"
             >
               <div className="relative group">
-                <img 
-                  src={service.image} 
-                  alt={service.title} 
+                <img
+                  src={service.image}
+                  alt={service.title}
                   className="w-full h-auto max-h-[80vh] object-contain border border-slate-200 dark:border-white/10 rounded-3xl transition-transform duration-1000 group-hover:scale-[1.02] shadow-sm"
                 />
               </div>
